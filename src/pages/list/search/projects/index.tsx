@@ -67,11 +67,7 @@ class Projects extends Component<ProjectsProps> {
                 <div className={styles.avatarList}>
                   <AvatarList size="small">
                     {item.members.map((member, index) => (
-                      <AvatarList.Item
-                        key={`${item.id}-${index}`}
-                        src={member.avatar}
-                        tips={member.name}
-                      />
+                      <AvatarList.Item key={`${item.id}-`} src={member.avatar} tips={member.name} />
                     ))}
                   </AvatarList>
                 </div>

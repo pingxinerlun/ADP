@@ -30,18 +30,20 @@ interface SettingsState {
 @connect(({ accountSettings }: { accountSettings: { currentUser: CurrentUser } }) => ({
   currentUser: accountSettings.currentUser,
 }))
-class Settings extends Component<
-  SettingsProps,
-  SettingsState
-> {
+class Settings extends Component<SettingsProps, SettingsState> {
   main: HTMLDivElement | undefined = undefined;
 
   constructor(props: SettingsProps) {
     super(props);
     const menuMap = {
-      base: <FormattedMessage id="account-settings.menuMap.basic" defaultMessage="Basic Settings" />,
+      base: (
+        <FormattedMessage id="account-settings.menuMap.basic" defaultMessage="Basic Settings" />
+      ),
       security: (
-        <FormattedMessage id="account-settings.menuMap.security" defaultMessage="Security Settings" />
+        <FormattedMessage
+          id="account-settings.menuMap.security"
+          defaultMessage="Security Settings"
+        />
       ),
       binding: (
         <FormattedMessage id="account-settings.menuMap.binding" defaultMessage="Account Binding" />

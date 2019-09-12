@@ -24,7 +24,10 @@ const AvatarView = ({ avatar }: { avatar: string }) => (
     <Upload fileList={[]}>
       <div className={styles.button_view}>
         <Button icon="upload">
-          <FormattedMessage id="account-settings.basic.change-avatar" defaultMessage="Change avatar" />
+          <FormattedMessage
+            id="account-settings.basic.change-avatar"
+            defaultMessage="Change avatar"
+          />
         </Button>
       </div>
     </Upload>
@@ -207,7 +210,10 @@ class BaseView extends Component<BaseViewProps> {
               })(<PhoneView />)}
             </FormItem>
             <Button type="primary" onClick={this.handlerSubmit}>
-              <FormattedMessage id="account-settings.basic.update" defaultMessage="Update Information" />
+              <FormattedMessage
+                id="account-settings.basic.update"
+                defaultMessage="Update Information"
+              />
             </Button>
           </Form>
         </div>
